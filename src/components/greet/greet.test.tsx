@@ -10,7 +10,7 @@ import { Greet } from "./greet";
 /**
  * You can use nesr describe blocks
  * You can use .skip and .only methods with describe blocks
- * You can have multiple describe blocks in same file
+ * You can have multiple describe blocks in same file (Test Suite)
  * Test Suite = A file
  *
  */
