@@ -15,7 +15,8 @@ test("Greet renders correctly", () => {
   expect(textElement).toBeInTheDocument();
 });
 
-test("Greet renders with a name", () => {
+// '.only' makes sure only said test is run on save
+test.only("Greet renders with a name", () => {
   render(<Greet name={"Brown"} />);
   const textElement = screen.getByText("Hello Brown");
   expect(textElement).toBeInTheDocument();
