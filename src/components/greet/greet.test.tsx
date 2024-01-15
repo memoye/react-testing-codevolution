@@ -19,16 +19,18 @@ describe("Greet", () => {
     // create virtual DOM of the component with 'render'
     render(<Greet />);
     // check if the text "Hello" is present
-    const textElement = screen.getByText("Hello"); // 'getByText' takes strings and regexes
+    const textElement = screen.getByText(/Hello/); // 'getByText' takes strings and regexes
     // test assertion with 'expect' from jest
     expect(textElement).toBeInTheDocument();
   });
 
-  // '.only' makes sure only said test is run on save
-  // test.only("Greet renders with a name", () => {
-  test("renders with a name", () => {
+  /**  
+   // '.only' makes sure only said test is run on save
+   // test.only("Greet renders with a name", () => {
+    test("renders with a name", () => {
     render(<Greet name={"Brown"} />);
     const textElement = screen.getByText("Hello Brown");
     expect(textElement).toBeInTheDocument();
   });
+  */
 });

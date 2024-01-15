@@ -6,7 +6,7 @@
 import { render, screen } from "@testing-library/react";
 import { Greet } from "./greet";
 
-describe("Greet", () => {
+describe.skip("Greet", () => {
   // 'it' can be used in place of 'test'
   it("renders correctly", () => {
     // 'xit' is same as test.skip

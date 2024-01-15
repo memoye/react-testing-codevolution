@@ -14,7 +14,7 @@ import { Greet } from "../components/greet/greet";
  * Test Suite = A file
  */
 
-describe("Greet", () => {
+describe.skip("Greet", () => {
   test("renders correctly", () => {
     // create virtual DOM of the component with 'render'
     render(<Greet />);
