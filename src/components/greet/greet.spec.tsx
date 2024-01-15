@@ -6,27 +6,18 @@
 import { render, screen } from "@testing-library/react";
 import { Greet } from "./greet";
 
-// Group multiple tests with 'describe'
-/**
- * You can use nested describe blocks
- * You can use .skip and .only methods with describe blocks
- * You can have multiple describe blocks in same file (Test Suite)
- * Test Suite = A file
- */
-
 describe("Greet", () => {
-  test("renders correctly", () => {
-    // create virtual DOM of the component with 'render'
+  // 'it' can be used in place of 'test'
+  it("renders correctly", () => {
+    // 'xit' is same as test.skip
+    // xit("renders correctly", () => {
     render(<Greet />);
-    // check if the text "Hello" is present
     const textElement = screen.getByText("Hello"); // 'getByText' takes strings and regexes
-    // test assertion with 'expect' from jest
     expect(textElement).toBeInTheDocument();
   });
 
-  // '.only' makes sure only said test is run on save
-  // test.only("Greet renders with a name", () => {
-  test("renders with a name", () => {
+  // 'fit' is same as test.only
+  fit("renders with a name", () => {
     render(<Greet name={"Brown"} />);
     const textElement = screen.getByText("Hello Brown");
     expect(textElement).toBeInTheDocument();

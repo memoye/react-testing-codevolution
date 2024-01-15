@@ -4,11 +4,11 @@
  */
 
 import { render, screen } from "@testing-library/react";
-import { Greet } from "./greet";
+import { Greet } from "../components/greet/greet";
 
 // Group multiple tests with 'describe'
 /**
- * You can use nested describe blocks
+ * You can use nesr describe blocks
  * You can use .skip and .only methods with describe blocks
  * You can have multiple describe blocks in same file (Test Suite)
  * Test Suite = A file
