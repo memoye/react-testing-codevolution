@@ -26,6 +26,9 @@ describe("Application", () => {
     });
     expect(nameElement).toBeInTheDocument();
 
+    const closeElement = screen.getByTitle("close");
+    expect(closeElement).toBeInTheDocument();
+
     // getByLabelText() example
     const nameElement2 = screen.getByLabelText("Name", {
       selector: "input", // narrow down results to input elements only
