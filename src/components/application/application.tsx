@@ -13,7 +13,8 @@ export const Application = () => {
           <textarea id="bio" name="bio" />
         </div>
         <div>
-          <label htmlFor="job-location">Job location</label>
+          {/* <label htmlFor="job-location">Job location</label> */}
+          <label htmlFor="job-location">Name</label>
           <select id="job-location">
             <option value="">Select a country</option>
             <option value="US">United States</option>
@@ -25,6 +26,8 @@ export const Application = () => {
         </div>
         <div>
           <label>
+            {" "}
+            {/**getByLabelText() still works as expected here */}
             <input type="checkbox" id="terms" /> I agree to the terms and
             conditions
           </label>
