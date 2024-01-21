@@ -13,7 +13,7 @@ function App() {
           placeItems: "center",
         }}
       >
-        <Skills />
+        <Skills skills={["HTML", "CSS"]} />
       </div>
     );
   }
