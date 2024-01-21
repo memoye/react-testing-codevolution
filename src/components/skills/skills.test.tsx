@@ -7,14 +7,14 @@ describe("Skills", () => {
   test("renders correctly", () => {
     render(<Skills skills={skills} />);
 
-    const listElement = screen.getByRole("list");
+    const listElement = screen.getByRole("list"); // finding the 'ul'
     expect(listElement).toBeInTheDocument();
   });
 
   test("renders a list of skills", () => {
     render(<Skills skills={skills} />);
 
-    const listItemElements = screen.getAllByRole("listitem");
+    const listItemElements = screen.getAllByRole("listitem"); // finding all the 'li'
     expect(listItemElements).toHaveLength(skills.length);
   });
 });

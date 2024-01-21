@@ -17,7 +17,8 @@ describe.skip("Greet", () => {
   });
 
   // 'fit' is same as test.only
-  fit("renders with a name", () => {
+  it("renders with a name", () => {
+    // fit("renders with a name", () => {
     render(<Greet name={"Brown"} />);
     const textElement = screen.getByText("Hello Brown");
     expect(textElement).toBeInTheDocument();
