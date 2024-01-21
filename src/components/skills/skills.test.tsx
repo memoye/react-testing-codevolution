@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, logRoles } from "@testing-library/react";
 import { Skills } from "./skills";
 
 describe("Skills", () => {
@@ -39,8 +39,12 @@ describe("Skills", () => {
   });
 
   test("'Strt learning' button is eventually displayed", async () => {
-    render(<Skills skills={skills} />);
+    const view = render(<Skills skills={skills} />);
+    logRoles(view.container);
     // const startLearningButton = screen.getByRole("button", { // using 'getBy' will fail because it does not wait for element to be rendered on the screen ('Start learning' renders after a delay of 500ms)
+
+    // screen.debug(); //  prints the DOM to the terminal so you can debug easily
+    /**Do not commit debug statements */
     const startLearningButton = await screen.findByRole(
       "button",
       {
