@@ -38,9 +38,9 @@ describe("Skills", () => {
     expect(startLearningButton).not.toBeInTheDocument();
   });
 
-  test("'Strt learning' button is eventually displayed", async () => {
+  test("'Start learning' button is eventually displayed", async () => {
     const view = render(<Skills skills={skills} />);
-    logRoles(view.container);
+    // logRoles(view.container);
     // const startLearningButton = screen.getByRole("button", { // using 'getBy' will fail because it does not wait for element to be rendered on the screen ('Start learning' renders after a delay of 500ms)
 
     // screen.debug(); //  prints the DOM to the terminal so you can debug easily
