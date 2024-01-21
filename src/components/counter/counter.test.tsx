@@ -36,9 +36,12 @@ describe("Counter", () => {
     render(<Counter />);
     const incrementButton = screen.getByRole("button", { name: "Increment" });
 
-    // user events are 'async' so we have to 'await'
+    // first click
     await user.click(incrementButton);
+
+    // second click
     await user.click(incrementButton);
+
     const countElement = screen.getByRole("heading");
     expect(countElement).toHaveTextContent("2");
   });
