@@ -37,4 +37,20 @@ describe("Skills", () => {
     });
     expect(startLearningButton).not.toBeInTheDocument();
   });
+
+  test("'Strt learning' button is eventually displayed", async () => {
+    render(<Skills skills={skills} />);
+    // const startLearningButton = screen.getByRole("button", { // using 'getBy' will fail because it does not wait for element to be rendered on the screen ('Start learning' renders after a delay of 500ms)
+    const startLearningButton = await screen.findByRole(
+      "button",
+      {
+        // returns a promis
+        name: "Start learning",
+      },
+      {
+        timeout: 2000, // override default 1000ms timeout
+      }
+    );
+    expect(startLearningButton).toBeInTheDocument();
+  });
 });
